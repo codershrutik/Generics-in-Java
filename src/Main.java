@@ -6,8 +6,26 @@ class Data{
         this.object = object;
     }
 
+    public Object getObject(Object object){
+        return object;
+    }
+
     public String toString(){
         return object.toString();
+    }
+}
+
+class Name{
+    private String name;
+
+    public Name(String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        // return "Name{" + "name=" + name + "\'" + "}";
+        return name;
     }
 }
 
@@ -19,6 +37,10 @@ public class Main{
         element.add(new Data(25));
         element.add(new Data(52.25));
         element.add(new Data("Meow"));
+        element.add(new Data(new Name("Shruti")));
         System.out.println(element);
+
+        Data x = new Data("Hello World");
+        // System.out.println(x.getObject());
     }
 }
